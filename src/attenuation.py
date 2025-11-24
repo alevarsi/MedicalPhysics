@@ -1,4 +1,3 @@
-from data import Data
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.optimize import curve_fit
@@ -14,7 +13,7 @@ def func(x, a, b):
 
 def analyze_attenuation(data_file, output_image, photon_energy):
     # Load data
-    data = np.loadtxt(data_file, 
+    data = np.loadtxt("../data/"+data_file, 
                       #delimiter='\t'
                       )
     energy = data[:, 0]*1000 #energy in keV
@@ -53,8 +52,8 @@ def analyze_attenuation(data_file, output_image, photon_energy):
             )
     # 'D' indica un marker a diamante
     ax.plot(photon_energy, coeff, marker='D', markersize=6, color='green')
-    fig.savefig(output_image)
+    fig.savefig("../plots/"+output_image)
     fig.show()
 
 energy = 120 # keV
-analyze_attenuation('attenuation_data.txt', 'attenuation_plot.png', energy)
+analyze_attenuation("attenuation_data.txt", "attenuation_plot.pdf", energy)
