@@ -64,7 +64,7 @@ def analyze_attenuation(data_file, output_image, photon_energy):
     fig.savefig("../plots/"+output_image)
     fig.show()
 
-energy = 120 # keV
-#energy_peak = 57.98 # keV
+#energy = 120 # keV
+energy_peak = 59.32 # keV
 #analyze_attenuation("attenuation_data.txt", "attenuation_plot.png", energy)
-analyze_attenuation("attenuation_data.txt", material + "_attenuation_data_plot.png", energy)
+analyze_attenuation("attenuation_peak.txt", material + "_attenuation_peak_plot.pdf", energy_peak)
