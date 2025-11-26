@@ -56,7 +56,7 @@ def analyze_attenuation(data_file, output_image, photon_energy):
             textcoords='figure fraction',
             fontsize=14,
             arrowprops=dict(facecolor='black', shrink=0.07, width=0.8, headwidth=5),
-            horizontalalignment='left',
+            horizontalalignment='center',
             verticalalignment='top',
             )
     # 'D' indica un marker a diamante
@@ -67,4 +67,4 @@ def analyze_attenuation(data_file, output_image, photon_energy):
 #energy = 120 # keV
 energy = 59.32 # keV
 #analyze_attenuation("attenuation_data.txt", "attenuation_plot.png", energy)
-analyze_attenuation("attenuation_peak.txt", material + "_attenuation_peak_plot.pdf", energy)
+analyze_attenuation("attenuation_peak.txt", material + "_attenuation_peak_plot.png", energy)
